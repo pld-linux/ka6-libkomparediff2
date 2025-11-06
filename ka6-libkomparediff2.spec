@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		libkomparediff2
 Summary:	libkomparediff2
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	32708c2599c49786d710af9dfd48afd6
+# Source0-md5:	47591e3a53574a45380ee5719d22da71
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= 5.4.0
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libkomparediff2.so.?
-%attr(755,root,root) %{_libdir}/libkomparediff2.so.*.*
+%{_libdir}/libkomparediff2.so.*.*
 %{_datadir}/qlogging-categories6/libkomparediff2.categories
 
 %files devel
